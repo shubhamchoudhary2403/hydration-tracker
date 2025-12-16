@@ -2,47 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 200 30% 98%;
-    --foreground: 200 50% 10%;
+    --background: 220 60% 99%;
+    --foreground: 220 50% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 200 50% 10%;
+    --card-foreground: 220 50% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 200 50% 10%;
+    --popover-foreground: 220 50% 10%;
 
-    --primary: 187 85% 43%;
+    --primary: 195 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 187 40% 94%;
-    --secondary-foreground: 187 85% 30%;
+    --secondary: 280 80% 65%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 200 20% 96%;
-    --muted-foreground: 200 15% 45%;
+    --muted: 220 20% 96%;
+    --muted-foreground: 220 15% 45%;
 
-    --accent: 160 70% 45%;
+    --accent: 160 80% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 200 20% 90%;
-    --input: 200 20% 90%;
-    --ring: 187 85% 43%;
+    --border: 220 20% 92%;
+    --input: 220 20% 92%;
+    --ring: 195 100% 50%;
 
     --radius: 1rem;
 
-    /* Custom tokens */
-    --water-gradient: linear-gradient(135deg, hsl(187 85% 55%) 0%, hsl(200 90% 45%) 100%);
-    --food-gradient: linear-gradient(135deg, hsl(160 70% 45%) 0%, hsl(140 60% 40%) 100%);
-    --glass-bg: hsl(0 0% 100% / 0.7);
-    --glass-border: hsl(200 30% 90% / 0.5);
-    --shadow-soft: 0 4px 24px -4px hsl(187 50% 40% / 0.15);
-    --shadow-glow: 0 0 30px hsl(187 85% 50% / 0.3);
+    /* Vibrant gradient tokens */
+    --gradient-water: linear-gradient(135deg, hsl(195 100% 60%) 0%, hsl(210 100% 55%) 50%, hsl(260 80% 65%) 100%);
+    --gradient-food: linear-gradient(135deg, hsl(160 80% 50%) 0%, hsl(180 70% 45%) 50%, hsl(195 90% 50%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(195 100% 95%) 0%, hsl(280 60% 95%) 50%, hsl(160 60% 95%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 40% 98%) 100%);
+    
+    /* Glow effects */
+    --glow-water: 0 0 40px hsl(195 100% 50% / 0.4), 0 0 80px hsl(210 100% 55% / 0.2);
+    --glow-food: 0 0 40px hsl(160 80% 50% / 0.4), 0 0 80px hsl(180 70% 45% / 0.2);
+    --glow-accent: 0 0 30px hsl(280 80% 65% / 0.3);
+    
+    --shadow-elevated: 0 20px 60px -15px hsl(220 50% 20% / 0.15), 0 10px 20px -10px hsl(220 50% 20% / 0.1);
+    --shadow-card: 0 4px 30px -4px hsl(220 50% 20% / 0.1);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -55,36 +61,36 @@
   }
 
   .dark {
-    --background: 200 40% 8%;
-    --foreground: 200 20% 95%;
+    --background: 220 40% 6%;
+    --foreground: 220 20% 95%;
 
-    --card: 200 40% 12%;
-    --card-foreground: 200 20% 95%;
+    --card: 220 40% 10%;
+    --card-foreground: 220 20% 95%;
 
-    --popover: 200 40% 12%;
-    --popover-foreground: 200 20% 95%;
+    --popover: 220 40% 10%;
+    --popover-foreground: 220 20% 95%;
 
-    --primary: 187 85% 50%;
-    --primary-foreground: 200 50% 10%;
+    --primary: 195 100% 55%;
+    --primary-foreground: 220 50% 10%;
 
-    --secondary: 200 30% 18%;
-    --secondary-foreground: 187 60% 70%;
+    --secondary: 280 80% 60%;
+    --secondary-foreground: 220 50% 10%;
 
-    --muted: 200 30% 15%;
-    --muted-foreground: 200 15% 60%;
+    --muted: 220 30% 15%;
+    --muted-foreground: 220 15% 60%;
 
-    --accent: 160 70% 50%;
-    --accent-foreground: 200 50% 10%;
+    --accent: 160 80% 50%;
+    --accent-foreground: 220 50% 10%;
 
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 200 30% 20%;
-    --input: 200 30% 20%;
-    --ring: 187 85% 50%;
+    --border: 220 30% 18%;
+    --input: 220 30% 18%;
+    --ring: 195 100% 55%;
 
-    --glass-bg: hsl(200 40% 12% / 0.8);
-    --glass-border: hsl(200 30% 25% / 0.5);
+    --gradient-hero: linear-gradient(135deg, hsl(220 40% 8%) 0%, hsl(280 30% 10%) 50%, hsl(195 30% 10%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 40% 12%) 0%, hsl(220 35% 10%) 100%);
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -113,75 +119,243 @@
 }
 
 @layer utilities {
+  .gradient-water {
+    background: var(--gradient-water);
+  }
+
+  .gradient-food {
+    background: var(--gradient-food);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .glow-water {
+    box-shadow: var(--glow-water);
+  }
+
+  .glow-food {
+    box-shadow: var(--glow-food);
+  }
+
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
   .glass {
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    border: 1px solid var(--glass-border);
+    background: hsl(0 0% 100% / 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(220 30% 90% / 0.6);
   }
 
-  .water-gradient {
-    background: var(--water-gradient);
+  .text-gradient-water {
+    background: var(--gradient-water);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
-  .food-gradient {
-    background: var(--food-gradient);
-  }
-
-  .shadow-soft {
-    box-shadow: var(--shadow-soft);
-  }
-
-  .shadow-glow {
-    box-shadow: var(--shadow-glow);
-  }
-
-  .animate-ripple {
-    animation: ripple 0.6s ease-out;
-  }
-
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
-  }
-
-  .animate-pulse-soft {
-    animation: pulse-soft 2s ease-in-out infinite;
+  .text-gradient-food {
+    background: var(--gradient-food);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
 
-@keyframes ripple {
-  0% {
-    transform: scale(0.8);
+/* Floating bubbles animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
     opacity: 1;
   }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(20px) rotate(-5deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes bubble-rise {
+  0% {
+    transform: translateY(100%) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
   100% {
-    transform: scale(1.5);
+    transform: translateY(-100vh) scale(1);
     opacity: 0;
   }
 }
 
-@keyframes float {
+@keyframes ripple-out {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes bounce-soft {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
 }
 
-@keyframes pulse-soft {
+@keyframes wiggle {
   0%, 100% {
-    opacity: 1;
+    transform: rotate(-3deg);
   }
   50% {
-    opacity: 0.7;
+    transform: rotate(3deg);
   }
 }
 
-@keyframes fill-up {
+@keyframes water-wave {
   0% {
-    height: 0%;
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-5px) translateY(-3px);
   }
   100% {
-    height: var(--fill-height);
+    transform: translateX(0) translateY(0);
   }
 }
+
+@keyframes success-pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 5s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-bubble-rise {
+  animation: bubble-rise 8s ease-in-out infinite;
+}
+
+.animate-ripple-out {
+  animation: ripple-out 1s ease-out forwards;
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-bounce-soft {
+  animation: bounce-soft 2s ease-in-out infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+.animate-water-wave {
+  animation: water-wave 3s ease-in-out infinite;
+}
+
+.animate-success-pop {
+  animation: success-pop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+}
+
+/* Stagger animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
